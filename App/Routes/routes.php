@@ -1,6 +1,6 @@
 <?php
 
-$router -> get('/', 'UtilisateurController', 'homeController');
+// $router -> get('/', 'UtilisateurController', 'homeController');
 
 
 
