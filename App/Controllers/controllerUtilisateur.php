@@ -1,6 +1,6 @@
 <?php
 
-basePath('App/Models/Utilisateur.php');
+require basePath('App/Models/Utilisateur.php');
 
 class controllerUtilisateur
 {
@@ -10,11 +10,15 @@ class controllerUtilisateur
         $this -> modelUtilisateur = new Utilisateur();
     }
 
-    public function createUtilisateur($nom, $email, $password){
-        $this -> modelUtilisateur->createUtilisateur($nom, $email, $password);
+    public function createUtilisateurController(){
 
-
-
+        if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+            $nom = htmlspecialchars($_POST['nom']);
+            $email = htmlspecialchars($_POST['email']);
+            $password = htmlspecialchars($_POST['password']);
+            $this -> modelUtilisateur->createUtilisateur($nom, $email, $password);
+        }
+            require basePath('App/Views/utilisateurView.php');
 
     }
 

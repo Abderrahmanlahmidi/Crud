@@ -1,6 +1,6 @@
 <?php
 
-basePath('App/Database/DatabaseConnection.php');
+require basePath('App/Database/DatabaseConnection.php');
 class Utilisateur
 {
 

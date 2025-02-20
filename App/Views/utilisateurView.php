@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Salles</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./style/style.css">
 
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
@@ -45,10 +45,10 @@
         <div class="bg-white p-6 rounded-lg shadow-lg w-1/3">
           <h2 class="text-lg font-semibold mb-4">Créer une nouvelle salle</h2>
 
-          <form id="createRoomForm">
+          <form id="createRoomForm" action="/" method="post" >
             <div class="mb-4">
-              <label for="roomName" class="block text-sm font-medium text-gray-700">Nom</label>
-              <input type="text" id="roomName" name="roomName" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+              <label for="nom" class="block text-sm font-medium text-gray-700">Nom</label>
+              <input type="text" id="nom" name="nom" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
             </div>
             <div class="mb-4">
               <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
@@ -96,7 +96,7 @@
                         Salle A
                     </th>
                     <td class="px-6 py-4">insert nome her</td>
-                    <td class="px-6 py-4">insert email her</td>
+
                     <td class="px-6 py-4">
                         <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Modifier</a>
                         <a href="#" class="font-medium text-red-600 dark:text-red-500 hover:underline ml-4">Supprimer</a>
@@ -108,5 +108,5 @@
     </div>
   </div>
 </body>
-<script src="script.js"></script>
+<script src="./js/script.js"></script>
 </html>
