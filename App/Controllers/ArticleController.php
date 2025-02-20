@@ -26,6 +26,7 @@ class ArticleController
         }
     }
 
+
     public function deleteArticle(int $id)
     {
 
@@ -40,3 +41,4 @@ class ArticleController
         }
     }
 }
+

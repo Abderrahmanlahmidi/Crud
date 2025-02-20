@@ -65,6 +65,7 @@ class Article
         return $article;
     }
 
+
     public function deleteArticle(int $id)
     {
         try {
@@ -82,5 +83,5 @@ class Article
     }
     
     
-    
+
 }
