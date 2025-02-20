@@ -1,16 +1,42 @@
 <?php
+class ArticleController
+{
 
-class ArticleController {
+    private Article $articleModel;
 
- private Article $articleController;
+    public function __construct()
+    {
+        $this->articleModel = new Article();
+    }
 
- public function __construct()
- {
-    return $this->articleController = new Article();
- }
+    public function addArticle()
+    {
+        if (isset($_POST['submit'])) {
+            $titre = $_POST['titre'];
+            $contenu = $_POST['contenu'];
+            $dateDePublication = $_POST['dateDePublication'];
+        }
+        try {
+            $article =  new Article();
+            $article->setTitre($titre);
+            $article->setContenu($contenu);
+            $article->setDateDePublication($dateDePublication);
+        } catch (PDOException $e) {
+            error_log('eror to add article' . $e->getMessage());
+        }
+    }
 
- public function addArticle()
- {
-    
- }
+    public function deleteArticle(int $id)
+    {
+
+        try {
+
+            $this->articleModel->deleteArticle($id);
+            header("Location: ");
+            exit();
+            
+        } catch (Exception $e) {
+            echo "eroor to delete articlkel" . $e->getMessage();
+        }
+    }
 }
