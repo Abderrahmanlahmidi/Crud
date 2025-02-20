@@ -9,11 +9,10 @@ class DatabaseConnection{
     {
 
         $username = "mysql";
-        $dbname = "freelanceedgedb";
+        $dbname = "crud";
         $host = "localhost";
         $password = "123123321321@instance";
-
-        $dsn = "pgsql:host=$host;dbname=$dbname";
+        $dsn = "mysql:host=$host;dbname=$dbname";
 
         try{
 
