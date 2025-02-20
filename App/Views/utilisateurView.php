@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Salles</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../../Public/Style/style.css">
 
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
@@ -108,5 +108,5 @@
     </div>
   </div>
 </body>
-<script src="script.js"></script>
+<script src="../../Public/Js/script.js"></script>
 </html>

@@ -8,10 +8,10 @@ class DatabaseConnection{
     private function __construct()
     {
 
-        $username = "mysql";
-        $dbname = "freelanceedgedb";
+        $username = "root";
+        $dbname = "Crud";
         $host = "localhost";
-        $password = "123123321321@instance";
+        $password = "";
 
         $dsn = "pgsql:host=$host;dbname=$dbname";
 
