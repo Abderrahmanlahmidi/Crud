@@ -64,4 +64,5 @@ class Article
         ]);
         return $article;
     }
+    
 }
