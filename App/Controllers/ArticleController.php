@@ -25,4 +25,6 @@ class ArticleController
             error_log('eror to add article' . $e->getMessage());
         }
     }
+
+    
 }
