@@ -15,5 +15,10 @@ class ArticleController {
  }
 
 
+ public function createArticle($titre, $contenu, $datePublication){
+     $query = 'insert into Articles (titre,contenu,datePublication)'
+ }
+
+
 
 }
