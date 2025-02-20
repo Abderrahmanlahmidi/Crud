@@ -65,6 +65,21 @@ class Article
         return $article;
     }
 
+    public function deleteArticle(int $id)
+    {
+        try {
+            $query = "DELETE FROM Articles WHERE id = :id";
+
+            $stmt = DatabaseConnection::getInstance()->prepare($query);
+            $stmt->bindParam(':id', $id);
+            $stmt->execute();
+
+            return $stmt->rowCount();
+        } catch (PDOException $e) {
+            error_log("eroro delete Articlmes" . $e->getMessage());
+            return false;
+        }
+    }
     
     
     
