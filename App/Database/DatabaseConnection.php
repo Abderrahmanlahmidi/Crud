@@ -7,6 +7,7 @@ class DatabaseConnection{
 
     private function __construct()
     {
+
         $username = "mysql";
         $dbname = "freelanceedgedb";
         $host = "localhost";
