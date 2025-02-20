@@ -14,8 +14,10 @@ class controllerUtilisateur
     public function createUtilisateurController()
     {
 
+
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $nom = htmlspecialchars($_POST['nom']);
+
             $email = htmlspecialchars($_POST['email']);
             $password = htmlspecialchars($_POST['password']);
             $this->modelUtilisateur->createUtilisateur($nom, $email, $password);
@@ -30,4 +32,9 @@ class controllerUtilisateur
     }}
 
 
-    
+    public function deleteUtilisateurController($id){
+        $this -> modelUtilisateur -> deleteUtilisateur($id);
+        require basePath('App/Models/Utilisateur.php');
+    }
+
+}
