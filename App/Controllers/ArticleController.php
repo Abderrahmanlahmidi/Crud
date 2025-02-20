@@ -26,5 +26,17 @@ class ArticleController
         }
     }
 
-    
+    public function deleteArticle(int $id)
+    {
+
+        try {
+
+            $this->articleModel->deleteArticle($id);
+            header("Location: ");
+            exit();
+            
+        } catch (Exception $e) {
+            echo "eroor to delete articlkel" . $e->getMessage();
+        }
+    }
 }
