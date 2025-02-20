@@ -1,5 +1,6 @@
 /.idea/
 /node_modules/
-/App/Database/DatabaseConnection.php/
+/App/Database/DatabaseConnection.php
+
 
     
