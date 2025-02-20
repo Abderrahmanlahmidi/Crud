@@ -1,6 +1,7 @@
 <?php
 
-class DatabaseConnection{
+class DatabaseConnection
+{
 
     public static $instance = null;
     private PDO $pdo;
@@ -8,45 +9,26 @@ class DatabaseConnection{
     private function __construct()
     {
 
+
         $username = "root";
         $dbname = "Crud";
         $host = "localhost";
         $password = "";
-
         $dsn = "pgsql:host=$host;dbname=$dbname";
 
-        try{
+        try {
 
-            $this -> pdo = new PDO($dsn, $username, $password);
-
-        }catch(PDOException $e){
-            echo "Error" . $e -> getMessage();
+            $this->pdo = new PDO($dsn, $username, $password);
+        } catch (PDOException $e) {
+            echo "Error" . $e->getMessage();
         }
-
     }
 
-    public static function getInstance():PDO{
+    public static function getInstance(): PDO
+    {
         if (self::$instance === null) {
-           self::$instance = new self();
+            self::$instance = new self();
         }
         return self::$instance->pdo;
     }
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

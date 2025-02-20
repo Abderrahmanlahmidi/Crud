@@ -1,5 +1,6 @@
 <?php
 
+require basePath('App/Database/DatabaseConnection.php');
 class Utilisateur
 {
 
@@ -43,4 +44,22 @@ class Utilisateur
     {
         $this->password = $password;
     }
+
+    public function createUtilisateur($nom, $email, $password){
+        $query = "INSERT INTO utilisateur(nom, email, password) VALUES(:nom, :email, :password)";
+        $stmt = DatabaseConnection::getInstance()->prepare($query);
+        $stmt->bindParam(':nom', $nom);
+        $stmt->bindParam(':email', $email);
+        $stmt->bindParam(':password', $password);
+        $stmt->execute();
+    }
+
+    public function deleteUtilisateur(int $id){
+        $query = "DELETE FROM utilisateur WHERE id = :id";
+        $stmt = DatabaseConnection::getInstance()->prepare($query);
+        $stmt->bindParam(':id', $id);
+        $stmt->execute();
+    }
+
+
 }
