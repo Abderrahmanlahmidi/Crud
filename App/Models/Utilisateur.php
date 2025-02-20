@@ -61,5 +61,25 @@ class Utilisateur
         $stmt->execute();
     }
 
+    public function updateUtilistaur(Utilisateur $user): bool
+    {
+        try {
+            $query = "UPDATE users SET nom = :nom,password = :lastname, email = :email,WHERE id = :id";
+
+            $stmt = DatabaseConnection::getInstance()->prepare($query);
+            return $stmt->execute([
+                'nom' => $user->getNom(),
+                'password' => $user->getPassword(),
+                'email' => $user->getEmail(),
+                'password' => $user->getPassword(),
+
+            ]);
+        } catch (PDOException $e) {
+            error_log("eroror: " . $e->getMessage());
+
+            return fsele;
+        }
+    }
+
 
 }
